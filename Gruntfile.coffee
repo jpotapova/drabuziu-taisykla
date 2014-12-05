@@ -6,10 +6,18 @@ module.exports = (grunt) ->
       options:
         layout: 'src/hbs/templates/basic.hbs'
         flatten: true
-      app:
+      lt:
+        options:
+          data: 'src/hbs/data/lt.json'
         files:
           app: 'src/hbs/pages/*.hbs'
-
+    copy:
+      libs:
+        flatten: true
+        expand: true
+        cwd: 'src/lib/'
+        src: '*.js'
+        dest: 'app/js/lib/'
 
   grunt.loadNpmTasks 'assemble'
   grunt.loadNpmTasks 'grunt-contrib-csslint'
@@ -21,4 +29,4 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-scss-lint'
 
-  grunt.registerTask 'default', ['assemble']
+  grunt.registerTask 'default', ['assemble', 'copy']
