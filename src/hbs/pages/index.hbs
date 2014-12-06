@@ -1,5 +1,24 @@
 ---
-lang: <%= lt %>
-title:
+page: <%= home %>
+site.nav.home.active: <% site.nav.home.active = true %>
 ---
-<h1>Hello world!</h1>
+
+{{#with home}}
+
+<article>
+
+  <h1>{{heading}}</h1>
+
+  <ul>
+    {{#each skills}}
+      <li>{{.}}</li>
+    {{/each}}
+  </ul>
+
+  <p>{{{sewing}}}</p>
+  <p>{{{uniform}}}</p>
+  <p>{{{selling}}}</p>
+
+</article>
+
+{{/with}}

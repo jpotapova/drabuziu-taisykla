@@ -6,8 +6,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{lang.website-title}} - {{#if title}}{{title}} - {{/if}}siuvimo ir taisymo paslaugos Antakalnyje</title>
-        <meta name="description" content="">
+        <title>{{site.title}} - {{#if page.title}}{{page.title}} - {{/if}}{{site.title-info}}</title>
+        <meta name="description" content="{{site.description}}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/main.css">
 
@@ -26,12 +26,76 @@
     <body>
 
         <header>
+
+          <div class="navigation">
+
+            <ul class="toggler">
+              <li><button>{{site.menu}}</button></li>
+              <li class="facebook">Facebook<br>button</li>
+            </ul>
+
+            <div class="menu">
+              <nav>
+                <ul>
+                  {{#with site.nav.home}}
+                  <li {{#if active}}class="active"{{/if}}><a href="{{link}}">{{label}}</a></li>
+                  {{/with}}
+                  {{#with site.nav.prices}}
+                  <li {{#if active}}class="active"{{/if}}><a href="{{link}}">{{label}}</a></li>
+                  {{/with}}
+                  {{#with site.nav.contacts}}
+                  <li {{#if active}}class="active"{{/if}}><a href="{{link}}">{{label}}</a></li>
+                  {{/with}}
+                </ul>
+              </nav>
+
+              <ul>
+                <li><a href="{{page.url}}" {{#if site.langs.lt}}class="active"{{/if}}>Lietuviškai</a></li>
+                <li><a href="{{page.url}}en" {{#if site.langs.en}}class="active"{{/if}}>English</a></li>
+                <li><a href="{{page.url}}ru" {{#if site.langs.ru}}class="active"{{/if}}>Русский</a></li>
+              </ul>
+            </div>
+
+        </div>
+
+          <p>{{site.title}}</p>
+          <p>{{site.intro}}</p>
         </header>
 
-        {{>body}}
+        <div id="main">
+
+          {{>body}}
+
+          {{#with site.working-hours}}
+          <article>
+            <h2>{{title}}</h2>
+            <dl>
+              <dt>I-V</dt>
+              <dd>10.00 - 18.00 ({{break}} 13.00-13.30)</dd>
+              <dt>VI</dt>
+              <dd>10.00 - 14.00</dd>
+              <p>{{after-hours}}</p>
+            </dl>
+          </article>
+          {{/with}}
+
+          <div>
+            <h2>{{contacts.title}}</h2>
+            <address>
+              <p>Venera</p>
+              <p>+370 611 08 650</p>
+              <p>+370 607 41 385</p>
+              <p>Antakalnio g. 84, Vilnius</p>
+              <p><a href="mailto:drabuziu.taisykla@gmail.com">drabuziu.taisykla@gmail.com</a></p>
+            </address>
+            <a href="{{site.nav.contacts.link}}">{{contacts.more}} &raquo;</a>
+          </div>
+
+        </div>
 
         <footer>
-          <p></p>
+          <span>&copy 2010-2014 DrabužiųTaisykla.lt</span>
+          <span>{{site.credit}}<a href="http://arcsin.se/" target="_blank">Arcsin</a></span>
         </footer>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

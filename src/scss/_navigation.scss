@@ -1,0 +1,80 @@
+header {
+  padding-top: $spacing-header;
+}
+.navigation {
+  background: $color-nav-bg;
+  color: $color-nav;
+  padding-top: 0;
+  opacity: 0.5;
+  position: fixed;
+  width: 100%;
+  top: 0;
+
+  &.active {
+    opacity: 1;
+  }
+
+  a {
+    color: $color-nav;
+    text-decoration: none;
+  }
+}
+
+.toggler {
+
+  display: table;
+  width: 100%;
+
+  li {
+    width: 50%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding: $spacing;
+  }
+
+  button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: none;
+    color: $color-nav;
+    font-size: $size-base;
+    text-transform: uppercase;
+    padding: 0;
+  }
+
+}
+
+.menu {
+
+  display: none;
+  width: 100%;
+
+  .active & {
+    display: table;
+  }
+
+  nav {
+    display: table-cell;
+    width: 50%;
+    border-top: 1px dashed $color-nav-border;
+    border-right: 1px dashed $color-nav-border;
+  }
+
+  >ul {
+    display: table-cell;
+    width: 50%;
+    border-top: 1px dashed $color-nav-border;
+  }
+
+  li {
+    text-align: center;
+
+    a {
+      padding: $spacing;
+      display: block;
+    }
+  }
+}

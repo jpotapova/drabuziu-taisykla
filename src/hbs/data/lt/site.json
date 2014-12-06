@@ -1,0 +1,32 @@
+{
+  "title": "Drabužių taisykla",
+  "title-info": "siuvimo ir taisymo paslaugos Antakalnyje",
+  "credit": "Dizainas: ",
+  "nav": {
+    "home": {
+      "link": "/",
+      "label": "Pradinis",
+      "active": false
+    },
+    "contacts": {
+      "link": "/contacts/",
+      "label": "Kontaktai",
+      "active": false
+    },
+    "prices": {
+      "link": "/prices/",
+      "label": "Kainos",
+      "active": false
+    }
+  },
+  "langs": {
+
+  },
+  "intro": "Maloniai kviečiame apsilankyti ir pasinaudoti drabužių siuvimo bei taisymo paslaugomis!",
+  "working-hours": {
+    "title": "Darbo laikas",
+    "break": "pertrauka",
+    "after-hours": "Nespėjate atvežti/pasiimti daiktus? Informuokite mus telefonu ir mes suderinsime laiką!"
+  },
+  "menu": "Meniu"
+}
