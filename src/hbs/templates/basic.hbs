@@ -4,6 +4,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
+        <base href="{{env.base}}" >
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{{site.title}} - {{#if page.title}}{{page.title}} - {{/if}}{{site.title-info}}</title>
@@ -30,8 +31,6 @@
           <p class="site-title"><a href="/">{{site.title}}</a></p>
           <p class="intro">{{{site.intro}}}</p>
 
-
-
           <nav>
             <ul>
               {{#with site.nav.home}}
@@ -45,7 +44,6 @@
               {{/with}}
             </ul>
           </nav>
-
 
         </header>
 

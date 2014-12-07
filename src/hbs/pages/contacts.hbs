@@ -1,0 +1,16 @@
+---
+page: <%= contacts %>
+site.nav.home.active: <% site.nav.home.active = false %>
+site.nav.prices.active: <% site.nav.prices.active = false %>
+site.nav.contacts.active: <% site.nav.contacts.active = true %>
+---
+
+{{#with contacts}}
+
+<article>
+
+  <h1>{{heading}}</h1>
+
+</article>
+
+{{/with}}

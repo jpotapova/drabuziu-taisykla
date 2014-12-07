@@ -9,9 +9,15 @@ module.exports = (grunt) ->
         flatten: true
       lt:
         options:
-          data: 'src/hbs/data/lt/*.json'
+          data: [
+            'src/hbs/data/lang/lt/*.json',
+            'src/hbs/data/dev/env.json'
+          ]
         files:
-          'app/': 'src/hbs/pages/*.hbs'
+          [
+            'app/index.html': 'src/hbs/pages/index.hbs'
+            'app/kontaktai/index.html': 'src/hbs/pages/contacts.hbs'
+          ]
     coffee:
       app:
         files:
