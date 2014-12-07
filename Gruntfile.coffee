@@ -12,6 +12,10 @@ module.exports = (grunt) ->
           data: 'src/hbs/data/lt/*.json'
         files:
           'app/': 'src/hbs/pages/*.hbs'
+    coffee:
+      app:
+        files:
+          'app/js/main.js': 'src/coffee/main.coffee'
     copy:
       libs:
         flatten: true
@@ -19,14 +23,20 @@ module.exports = (grunt) ->
         cwd: 'src/lib/'
         src: '*.js'
         dest: 'app/js/lib/'
+      imgs:
+        flatten: true
+        expand: true
+        cwd: 'src/img/'
+        src: '*'
+        dest: 'app/img/'
     sass:
       app:
         files:
           'app/css/main.css': 'src/scss/main.scss'
     watch:
       app:
-        files: ['src/**/*.js', 'src/**/*.scss', 'src/**/*.hbs', 'src/**/*.json']
-        tasks: ['clean', 'assemble', 'copy', 'sass']
+        files: ['src/**/*.js', 'src/**/*.scss', 'src/**/*.hbs', 'src/**/*.json', 'src/**/*.coffee']
+        tasks: ['assemble', 'copy', 'sass', 'coffee']
 
 
   grunt.loadNpmTasks 'assemble'
@@ -35,8 +45,9 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-jshint'
   grunt.loadNpmTasks 'grunt-contrib-copy'
+  grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-coffeelint'
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-scss-lint'
 
-  grunt.registerTask 'default', ['clean', 'assemble', 'copy', 'sass', 'watch']
+  grunt.registerTask 'default', ['assemble', 'copy', 'sass', 'coffee', 'watch']

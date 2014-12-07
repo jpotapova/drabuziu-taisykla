@@ -1,0 +1,15 @@
+$footer-img-w: 43px;
+
+footer {
+  border-top: 1px solid $color-secondary-border;
+  padding: $spacing;
+  width: 100%;
+  font-size: 0.8em;
+  color: $color-secondary;
+
+  >div {
+    background: url(../img/footer.png) left center no-repeat;
+    padding-left: $footer-img-w + $spacing * 2;
+  }
+
+}

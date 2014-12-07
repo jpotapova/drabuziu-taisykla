@@ -28,7 +28,7 @@
         <header>
 
           <p class="site-title"><a href="/">{{site.title}}</a></p>
-          <p>{{{site.intro}}}</p>
+          <p class="intro">{{{site.intro}}}</p>
 
 
 
@@ -53,36 +53,42 @@
 
           {{>body}}
 
-          {{#with site.working-hours}}
-          <article>
-            <h2>{{title}}</h2>
-            <dl>
-              <dt>I-V</dt>
-              <dd>10.00 - 18.00 ({{break}} 13.00-13.30)</dd>
-              <dt>VI</dt>
-              <dd>10.00 - 14.00</dd>
-              <p>{{after-hours}}</p>
-            </dl>
-          </article>
-          {{/with}}
+          <div id="sidebar">
 
-          <div>
-            <h2>{{contacts.title}}</h2>
-            <address>
-              <p>Venera</p>
-              <p>+370 611 08 650</p>
-              <p>+370 607 41 385</p>
-              <p>Antakalnio g. 84, Vilnius</p>
-              <p><a href="mailto:drabuziu.taisykla@gmail.com">drabuziu.taisykla@gmail.com</a></p>
-            </address>
-            <a href="{{site.nav.contacts.link}}">{{contacts.more}} &raquo;</a>
+            {{#with site.working-hours}}
+            <article>
+              <h2>{{title}}</h2>
+              <dl>
+                <dt>I-V</dt>
+                <dd>10.00 - 18.00 ({{break}} 13.00-13.30)</dd>
+                <dt>VI</dt>
+                <dd>10.00 - 14.00</dd>
+                <p>{{after-hours}}</p>
+              </dl>
+            </article>
+            {{/with}}
+
+            <div>
+              <h2>{{contacts.title}}</h2>
+              <address>
+                <p>Venera</p>
+                <p>+370 611 08 650</p>
+                <p>+370 607 41 385</p>
+                <p>Antakalnio g. 84, Vilnius</p>
+                <p><a href="mailto:drabuziu.taisykla@gmail.com">drabuziu.taisykla@gmail.com</a></p>
+              </address>
+              <a href="{{site.nav.contacts.link}}">{{contacts.more}} &raquo;</a>
+            </div>
+
           </div>
 
         </div>
 
         <footer>
-          <span>&copy 2010-2014 DrabužiųTaisykla.lt</span>
-          <span>{{site.credit}}<a href="http://arcsin.se/" target="_blank">Arcsin</a></span>
+          <div>
+            <div>&copy 2010-2014 DrabužiųTaisykla.lt</div>
+            <div>{{site.credit}}<a href="http://arcsin.se/" target="_blank">Arcsin</a></div>
+          </div>
         </footer>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

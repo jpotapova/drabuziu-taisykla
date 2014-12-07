@@ -1,10 +1,21 @@
 header {
-  padding: $spacing*2 $spacing;
+  padding: $spacing;
+  padding-top: $spacing * 2;
+  border-bottom: 1px dashed $color-heading;
+  background: $color-bg;
+  width: 100%;
+  opacity: 0.9;
 }
 
 nav {
 
   font-size: 0;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
   li {
     display: inline-block;
@@ -12,6 +23,13 @@ nav {
     font-size: $size-base * 1.2;
     text-align: center;
     border-right: 1px solid $color-link;
+
+    &.active {
+      a {
+        text-decoration: none;
+        color: $color-heading;
+      }
+    }
 
     &:last-child {
       border-right: none;

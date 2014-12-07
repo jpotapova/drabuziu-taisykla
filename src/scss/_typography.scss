@@ -13,6 +13,7 @@ h1 {
   font-size: 1.6em;
   font-weight: normal;
   text-align: center;
+  margin: $spacing 0;
 }
 
 h2 {
@@ -20,10 +21,15 @@ h2 {
   font-size: 1.4em;
 }
 
+strong {
+  color: $color-heading;
+  font-weight: normal;
+}
+
 header {
   p {
     text-align: center;
-    color: $color-grey;
+    color: $color-secondary;
     font-size: 0.8em;
   }
 }
