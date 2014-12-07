@@ -27,41 +27,25 @@
 
         <header>
 
-          <div class="navigation">
+          <p class="site-title"><a href="/">{{site.title}}</a></p>
+          <p>{{{site.intro}}}</p>
 
-            <ul class="toggler">
-              <li><button>{{site.menu}}</button></li>
-              <li class="facebook">Facebook<br>button</li>
+
+
+          <nav>
+            <ul>
+              {{#with site.nav.home}}
+              <li {{#if active}}class="active"{{/if}}><a href="{{link}}">{{label}}</a></li>
+              {{/with}}
+              {{#with site.nav.prices}}
+              <li {{#if active}}class="active"{{/if}}><a href="{{link}}">{{label}}</a></li>
+              {{/with}}
+              {{#with site.nav.contacts}}
+              <li {{#if active}}class="active"{{/if}}><a href="{{link}}">{{label}}</a></li>
+              {{/with}}
             </ul>
+          </nav>
 
-            <div class="menu">
-              <nav>
-                <ul>
-                  {{#with site.nav.home}}
-                  <li {{#if active}}class="active"{{/if}}><a href="{{link}}">{{label}}</a></li>
-                  {{/with}}
-                  {{#with site.nav.prices}}
-                  <li {{#if active}}class="active"{{/if}}><a href="{{link}}">{{label}}</a></li>
-                  {{/with}}
-                  {{#with site.nav.contacts}}
-                  <li {{#if active}}class="active"{{/if}}><a href="{{link}}">{{label}}</a></li>
-                  {{/with}}
-                </ul>
-              </nav>
-
-              <ul>
-                <li><a href="{{page.url}}" {{#if site.langs.lt}}class="active"{{/if}}>Lietuviškai</a></li>
-                <li><a href="{{page.url}}en" {{#if site.langs.en}}class="active"{{/if}}>English</a></li>
-                <li><a href="{{page.url}}ru" {{#if site.langs.ru}}class="active"{{/if}}>Русский</a></li>
-              </ul>
-            </div>
-
-          </div>
-
-          <div class="intro">
-            <p class="site-title">{{site.title}}</p>
-            <p>{{site.intro}}</p>
-          </div>
 
         </header>
 
