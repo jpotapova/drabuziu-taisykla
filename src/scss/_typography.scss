@@ -13,15 +13,21 @@ h1 {
   font-size: 1.6em;
   font-weight: normal;
   text-align: center;
-  margin: $spacing 0 $spacing * 2 0;
+  margin: $spacing 0 $spacing * 3 0;
 }
 
 h2 {
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-weight: normal;
+  text-align: center;
+  margin: $spacing*3 0 $spacing 0;
+}
+
+h3 {
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
   margin: 0;
-  margin-bottom: $spacing / 2;
-  line-height: 1em;
 }
 
 strong {
@@ -42,6 +48,10 @@ img {
   width: 100%;
 }
 
+p {
+  margin: $spacing 0;
+}
+
 header {
   p {
     text-align: center;
@@ -50,8 +60,27 @@ header {
   }
 }
 
+address {
+  font-style: normal;
+
+  .main & p {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+table {
+  margin: 0 auto $spacing auto;
+  border-spacing: 0;
+
+  td {
+    vertical-align: top;
+    padding: 0 $spacing $spacing $spacing;
+  }
+
+}
+
 .site-title {
-  text-transform: uppercase;
   font-size: 1.8em;
   margin: 0;
   margin-bottom: $spacing;

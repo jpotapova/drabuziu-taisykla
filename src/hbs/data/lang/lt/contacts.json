@@ -7,5 +7,10 @@
   },
   "vika": {
     "job": "Siuvėja-modeliuotoja"
+  },
+  "break": "pertrauka",
+  "hours": {
+    "late": "Nespėjate atvežti/pasiimti daiktus?",
+    "arrange": "Informuokite mus telefonu ir mes suderinsime laiką!"
   }
 }

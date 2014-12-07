@@ -36,7 +36,7 @@ module.exports = (grunt) ->
         flatten: true
         expand: true
         cwd: 'src/img/'
-        src: '*'
+        src: ['*.png', '*.jpg']
         dest: 'app/img/'
     jshint:
       app: 'app/js/main.js'

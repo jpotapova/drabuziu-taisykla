@@ -8,17 +8,13 @@ body {
   margin: 0;
 }
 
-#main {
+.main {
   padding: $spacing;
   padding-bottom: 0;
 
   p {
     text-align: justify;
   }
-}
-
-#sidebar {
-  display: none;
 }
 
 .scrolled {
@@ -32,7 +28,7 @@ body {
     }
   }
 
-  #main {
+  .main {
     margin-top: 7em;
   }
 

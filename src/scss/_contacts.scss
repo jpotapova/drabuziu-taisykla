@@ -1,3 +1,5 @@
+
+
 .contact {
 
   display: table;
@@ -10,21 +12,29 @@
     text-align: left;
   }
 
-  address {
-    font-style: normal;
 
-    p {
-      margin: 0;
-    }
+
+  h2 {
+    color: $color-heading;
+    text-align: left;
   }
 
-}
-
-.name {
-  color: $color-heading;
 }
 
 .photo {
   width: 80px;
   padding-right: $spacing;
+}
+
+.arrange {
+  p {
+    margin-top: 0;
+  }
+}
+
+.days {
+  font-weight: bold;
+  text-align: right;
+  border-right: 1px solid $color-secondary-border;
+  width: 35%;
 }

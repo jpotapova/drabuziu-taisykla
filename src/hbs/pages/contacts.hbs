@@ -11,18 +11,41 @@ site.nav.contacts.active: <% site.nav.contacts.active = true %>
 
   <h1>{{heading}}</h1>
 
+  <address>
+    <p>+370 611 08 650</p>
+    <p>+370 607 41 385</p>
+    <p>Antakalnio g. 84, Vilnius</p>
+    <p><a href="mailto:drabuziu.taisykla@gmail.com">drabuziu.taisykla@gmail.com</a></p>
+  </address>
+
+  <section>
+    <h2>Darbo laikas</h2>
+    <table>
+      <tr>
+        <td class="days">I-V</td>
+        <td>10.00 - 18.00<br>({{break}} 13.00-13.30)</td>
+      </tr>
+      <tr>
+        <td class="days">VI</td>
+        <td>10.00 - 14.00</td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="arrange">
+    <h3>{{hours.late}}</h3>
+    <p>{{hours.arrange}}</p>
+  </section>
+
+
+  {{#if false}}
+
   {{#with venera}}
   <section class="contact">
     <div class="photo">
       <img src="img/technologe-konstruktore-venera.jpg" alt="{{job}} Venera" />
     </div>
-    <address>
-      <h2>{{job}}<br><span class="name">Venera</span></h2>
-      <p>+370 611 08 650</p>
-      <p>+370 607 41 385</p>
-      <p>Antakalnio g. 84, Vilnius</p>
-      <p><a href="mailto:drabuziu.taisykla@gmail.com">drabuziu.taisykla@gmail.com</a></p>
-    </address>
+
   </section>
   {{/with}}
 
@@ -32,14 +55,13 @@ site.nav.contacts.active: <% site.nav.contacts.active = true %>
       <img src="img/siuveja-modeliuotoja-viktorija.jpg" alt="{{job}} Viktorija"/>
     </div>
     <div>
-      <h2>{{job}}<br><span class="name">Viktorija</span></h2>
+      <h2><span class="name">Viktorija</span><br>{{job}}</h2>
     </div>
   </section>
   {{/with}}
 
-  <section>
-    <h2>Darbo laikas</h2>
-  </section>
+
+  {{/if}}
 
 </article>
 
