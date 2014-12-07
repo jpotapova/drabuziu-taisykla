@@ -1,7 +1,7 @@
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;       
+  box-sizing: border-box;
 }
 
 body {
@@ -13,5 +13,17 @@ header {
     list-style: none;
     margin: 0;
     padding: 0;
+  }
+}
+
+.intro {
+  padding: 0 $spacing;
+}
+
+#main {
+  padding: 0 $spacing;
+
+  p {
+    text-align: justify;
   }
 }
