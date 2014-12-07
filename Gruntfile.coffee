@@ -16,6 +16,9 @@ module.exports = (grunt) ->
       app:
         files:
           'app/js/main.js': 'src/coffee/main.coffee'
+    coffeelint:
+      app: 'src/coffee/main.coffee'
+      grunt: 'Gruntfile.coffee'
     copy:
       libs:
         flatten: true
@@ -29,6 +32,8 @@ module.exports = (grunt) ->
         cwd: 'src/img/'
         src: '*'
         dest: 'app/img/'
+    jshint:
+      app: 'app/js/main.js'
     sass:
       app:
         files:
@@ -41,7 +46,7 @@ module.exports = (grunt) ->
         'app/css/main.css'
     watch:
       app:
-        files: ['src/**/*.js', 'src/**/*.scss', 'src/**/*.hbs', 'src/**/*.json', 'src/**/*.coffee']
+        files: ['src/**/*.*']
         tasks: ['dev']
 
 
@@ -55,5 +60,13 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-coffeelint'
   grunt.loadNpmTasks 'grunt-contrib-clean'
 
-  grunt.registerTask 'dev', ['assemble', 'copy', 'sass', 'csslint', 'coffee']
+  grunt.registerTask 'dev', [
+    'assemble',
+    'copy',
+    'sass',
+    'csslint',
+    'coffeelint',
+    'coffee',
+    'jshint'
+  ]
   grunt.registerTask 'default', ['dev', 'watch']
