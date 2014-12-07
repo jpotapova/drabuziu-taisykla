@@ -24,15 +24,15 @@ nav {
     text-align: center;
     border-right: 1px solid $color-link;
 
-    &.active {
-      a {
-        text-decoration: none;
-        color: $color-heading;
-      }
-    }
-
     &:last-child {
       border-right: none;
+    }
+  }
+
+  .active {
+    a {
+      text-decoration: none;
+      color: $color-heading;
     }
   }
 }
