@@ -11,6 +11,36 @@ site.nav.contacts.active: <% site.nav.contacts.active = true %>
 
   <h1>{{heading}}</h1>
 
+  {{#with venera}}
+  <section class="contact">
+    <div class="photo">
+      <img src="img/technologe-konstruktore-venera.jpg" alt="{{job}} Venera" />
+    </div>
+    <address>
+      <h2>{{job}}<br><span class="name">Venera</span></h2>
+      <p>+370 611 08 650</p>
+      <p>+370 607 41 385</p>
+      <p>Antakalnio g. 84, Vilnius</p>
+      <p><a href="mailto:drabuziu.taisykla@gmail.com">drabuziu.taisykla@gmail.com</a></p>
+    </address>
+  </section>
+  {{/with}}
+
+  {{#with vika}}
+  <section class="contact">
+    <div class="photo">
+      <img src="img/siuveja-modeliuotoja-viktorija.jpg" alt="{{job}} Viktorija"/>
+    </div>
+    <div>
+      <h2>{{job}}<br><span class="name">Viktorija</span></h2>
+    </div>
+  </section>
+  {{/with}}
+
+  <section>
+    <h2>Darbo laikas</h2>
+  </section>
+
 </article>
 
 {{/with}}

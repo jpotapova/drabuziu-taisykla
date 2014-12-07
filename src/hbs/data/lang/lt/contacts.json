@@ -1,4 +1,11 @@
 {
   "title": "Kontaktai",
-  "more": "Plačiau"
+  "heading": "Kontaktai",
+  "more": "Plačiau",
+  "venera": {
+    "job": "Technologė-konstruktorė"
+  },
+  "vika": {
+    "job": "Siuvėja-modeliuotoja"
+  }
 }
