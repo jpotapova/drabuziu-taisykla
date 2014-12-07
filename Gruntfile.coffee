@@ -36,7 +36,7 @@ module.exports = (grunt) ->
     watch:
       app:
         files: ['src/**/*.js', 'src/**/*.scss', 'src/**/*.hbs', 'src/**/*.json', 'src/**/*.coffee']
-        tasks: ['assemble', 'copy', 'sass', 'coffee']
+        tasks: ['dev']
 
 
   grunt.loadNpmTasks 'assemble'
@@ -48,6 +48,6 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-coffeelint'
   grunt.loadNpmTasks 'grunt-contrib-clean'
-  grunt.loadNpmTasks 'grunt-scss-lint'
 
-  grunt.registerTask 'default', ['assemble', 'copy', 'sass', 'coffee', 'watch']
+  grunt.registerTask 'dev', ['assemble', 'copy', 'sass', 'coffee']
+  grunt.registerTask 'default', ['dev', 'watch']

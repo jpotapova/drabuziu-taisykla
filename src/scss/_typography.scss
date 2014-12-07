@@ -26,6 +26,14 @@ strong {
   font-weight: normal;
 }
 
+ul {
+  padding-left: $spacing * 2;
+}
+
+li {
+  list-style-image: url($img-dir + 'li.png');
+}
+
 header {
   p {
     text-align: center;
