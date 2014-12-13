@@ -1,6 +1,5 @@
 {
   "title": "",
-  "description": "Maloniai kviečiame apsilankyti ir pasinaudoti drabužių siuvimo bei taisymo paslaugomis! Trumpiname, ilginame kelnes, sijonus, trikotažinius drabužius, siuriname, platiname, lopome, keičiame užtrauktukus, pamušalus.",
   "url": "/",
   "heading": "Mes galime",
   "skills": [
@@ -15,5 +14,6 @@
   "sewing": "Priimami užsakymai moteriškų <strong>drabužių siuvimui</strong>.",
   "uniform": "Jums pageidaujant sukursime ir pasiūsime Jūsų įmonės <strong>darbuotojų aprangą</strong>.",
   "selling": "<strong>Parduodami</strong> įvairių modelių <strong>moteriški ir vyriški paltai</strong>, kuriuos taip pat galima užsakyti reikiamo dydžio.",
-  "welcome-img": "Drabužių taisykla Antakalnyje - įėjimas"
+  "welcome-img": "Drabužių taisykla Antakalnyje - įėjimas",
+  "description": "Maloniai kviečiame apsilankyti ir pasinaudoti drabužių siuvimo bei taisymo paslaugomis! Trumpiname, ilginame kelnes, sijonus, trikotažinius drabužius, siuriname, platiname, lopome, keičiame užtrauktukus, pamušalus."
 }
