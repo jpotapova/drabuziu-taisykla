@@ -12,17 +12,29 @@ site.nav.contacts.active: <% site.nav.contacts.active = false %>
 
   <h1>{{heading}}</h1>
 
-  <ul>
-    {{#each skills}}
-      <li>{{.}}</li>
-    {{/each}}
-  </ul>
+  <div class="columns">
 
-  <p>{{{sewing}}}</p>
-  <p>{{{uniform}}}</p>
-  <p>{{{selling}}}</p>
+    <div class="column">
 
-  <img src="img/drabuziu-taisykla-antakalnyje.jpg" alt="{{welcome-img}}"/>
+      <ul>
+        {{#each skills}}
+          <li>{{.}}</li>
+        {{/each}}
+      </ul>
+
+      <p>{{{sewing}}}</p>
+      <p>{{{uniform}}}</p>
+      <p>{{{selling}}}</p>
+
+    </div>
+
+    <div class="column">
+
+      <img src="img/drabuziu-taisykla-antakalnyje.jpg" alt="{{welcome-img}}"/>
+
+    </div>
+
+  </div>
 
 </article>
 
