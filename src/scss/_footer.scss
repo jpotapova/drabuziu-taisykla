@@ -16,11 +16,3 @@ footer {
   }
 
 }
-
-@media #{$phone-lrg-landscape} {
-
-  footer {
-    padding-left: $nav-width + 1.5em;
-  }
-
-}
