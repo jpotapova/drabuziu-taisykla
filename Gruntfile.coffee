@@ -44,6 +44,10 @@ module.exports = (grunt) ->
       app:
         files:
           'app/css/main.css': 'src/scss/main.scss'
+    scsslint:
+      app: [
+        'src/scss/*.scss'
+      ]
     csslint:
       app:
         options:
@@ -59,6 +63,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'assemble'
   grunt.loadNpmTasks 'grunt-contrib-csslint'
   grunt.loadNpmTasks 'grunt-contrib-sass'
+  grunt.loadNpmTasks 'grunt-scss-lint'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-jshint'
   grunt.loadNpmTasks 'grunt-contrib-copy'
@@ -70,7 +75,7 @@ module.exports = (grunt) ->
     'assemble',
     'copy',
     'sass',
-    'csslint',
+    'scsslint',
     'coffeelint',
     'coffee',
     'jshint'
