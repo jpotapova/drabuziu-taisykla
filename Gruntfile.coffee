@@ -75,7 +75,6 @@ module.exports = (grunt) ->
     'assemble',
     'copy',
     'sass',
-    'scsslint',
     'coffeelint',
     'coffee',
     'jshint'

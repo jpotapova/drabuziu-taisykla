@@ -1,5 +1,9 @@
 $menu-items: 2;
 $spacing-header: 80px;
+$color-nav: #640f85;
+$color-nav-active: #82329d;
+$color-nav-text: #DCD;
+$color-nav-border: #f8b7ef;
 
 // -----------------------------------------------------------------------------
 
@@ -38,6 +42,53 @@ nav {
     a {
       text-decoration: none;
       color: $color-heading;
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+
+@media #{$tablet} {
+  header {
+    position: relative;
+  }
+
+  nav {
+    position: absolute;
+    top: 0;
+    left: $spacing;
+    font-size: $size-base;
+    width: 9em;
+    border: 4px solid $color-nav-border;
+    border-top: none;
+
+    li {
+      width: 100%;
+      border-right: none;
+      display: block;
+      border: 2px solid transparent;
+      border-top: none;
+      border-bottom: none;
+
+      &:last-child {
+        border-right: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: $color-nav-text;
+      width: 100%;
+      display: block;
+      background: $color-nav;
+      font-size: $size-base;
+      line-height: 2.5em;
+    }
+
+    .active a {
+      color: $color-bg;
+      background: $color-nav-active;
     }
   }
 }
