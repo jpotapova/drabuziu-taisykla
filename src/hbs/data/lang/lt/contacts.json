@@ -12,5 +12,13 @@
   "hours": {
     "late": "Nespėjate atvežti/pasiimti daiktus?",
     "arrange": "Informuokite mus telefonu ir mes suderinsime laiką!"
-  }
+  },
+  "find-us": "Kaip mus rasti?",
+  "stop": "Artimiausia stotelė: ",
+  "buses": "Autobusai: ",
+  "trolleybuses": "Troleibusai: ",
+  "journey-planner": "Rasti greičiausią maršrutą",
+  "car": "Automobilių stovėjimas",
+  "car-info": "Mes neturime specialios automobilių stovėjimo aikštelės, tačiau dažniausiai automobilį galima pasistatyti 3-5 min kelio pėsčiomis atstumu.",
+  "team": "Komanda"
 }

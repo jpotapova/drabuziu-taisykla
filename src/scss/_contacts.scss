@@ -1,3 +1,7 @@
+$photo-w: 80px;
+
+// -----------------------------------------------------------------------------
+
 .contact {
 
   display: table;
@@ -18,7 +22,7 @@
 }
 
 .photo {
-  width: 80px;
+  width: $photo-w;
   padding-right: $spacing;
 }
 
@@ -33,4 +37,46 @@
   text-align: right;
   border-right: 1px solid $color-secondary-border;
   width: 35%;
+}
+
+.find {
+  p {
+    margin: 0;
+  }
+}
+
+.journey {
+  margin-bottom: $spacing * 2;
+  p {
+    text-align: center;
+  }
+}
+
+.team {
+
+  >div {
+    margin: 0 auto;
+    font-size: 0;
+  }
+
+  .person {
+    font-size: $size-base;
+    width: 50%;
+    display: inline-block;
+
+    img {
+      width: 80px;
+      clear: both;
+    }
+
+    &:first-child {
+      text-align: right;
+      padding-right: $spacing;
+    }
+
+    &:last-child {
+      text-aling: left;
+      padding-left: $spacing;
+    }
+  }
 }
