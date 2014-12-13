@@ -11,8 +11,16 @@ footer {
   color: $color-secondary;
 
   >div {
-    background: url(../img/footer.png) left center no-repeat;
+    background: url($img-dir + 'footer.png') left center no-repeat;
     padding-left: $footer-img-w + $spacing * 2;
+  }
+
+}
+
+@media #{$phone-lrg-landscape} {
+
+  footer {
+    padding-left: $nav-width + 1.5em;
   }
 
 }

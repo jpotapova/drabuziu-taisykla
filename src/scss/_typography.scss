@@ -3,6 +3,7 @@ body {
   line-height: $line-height;
   font-size: $size-base;
   font-family: $font;
+  background: $color-bg url($img-dir + 'body.jpg') no-repeat right bottom;
 }
 
 a {
@@ -46,6 +47,22 @@ li {
 
 img {
   width: 100%;
+}
+
+@media (min-width: 467px) {
+  img {
+    width: auto;
+  }
+
+  .img-container {
+    text-align: center;
+  }
+}
+
+@media #{$phone-lrg-landscape} {
+  img {
+    max-width: 100%;
+  }
 }
 
 p {

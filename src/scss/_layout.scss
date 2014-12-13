@@ -8,6 +8,10 @@ body {
   margin: 0;
 }
 
+.wrapper {
+  background: url($img-dir + 'wrapper.jpg') no-repeat left top;
+}
+
 .main {
   padding: $spacing;
   padding-bottom: 0;

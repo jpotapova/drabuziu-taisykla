@@ -13,7 +13,7 @@ header {
   padding-top: $spacing * 2;
   border-bottom: 1px dashed $color-heading;
   border-bottom: 1px solid $color-secondary-border;
-  background: $color-bg;
+  background: url($img-dir + 'transp.png') repeat $color-bg;
   width: 100%;
   opacity: 0.9;
 }
