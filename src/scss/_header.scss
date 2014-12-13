@@ -4,13 +4,15 @@ $color-nav: #640f85;
 $color-nav-active: #82329d;
 $color-nav-text: #DCD;
 $color-nav-border: #f8b7ef;
-
+$nav-width: 9em;
+$nav-border-size: 4px;
 // -----------------------------------------------------------------------------
 
 header {
   padding: $spacing;
   padding-top: $spacing * 2;
   border-bottom: 1px dashed $color-heading;
+  border-bottom: 1px solid $color-secondary-border;
   background: $color-bg;
   width: 100%;
   opacity: 0.9;
@@ -47,10 +49,18 @@ nav {
 }
 
 // -----------------------------------------------------------------------------
+@mixin nav-inner-border($side: all) {
+  @if $side == all {
+    border: $nav-border-size/2 solid transparent;
+  } @else {
+    border-#{$side}: $nav-border-size/2 solid transparent;
+  }
+}
 
-@media #{$tablet} {
+@media #{$phone-lrg-landscape} {
   header {
     position: relative;
+    padding-left: $nav-width + 1.5em;
   }
 
   nav {
@@ -58,21 +68,21 @@ nav {
     top: 0;
     left: $spacing;
     font-size: $size-base;
-    width: 9em;
-    border: 4px solid $color-nav-border;
+    width: $nav-width;
+    border: $nav-border-size solid $color-nav-border;
     border-top: none;
 
     li {
       width: 100%;
       border-right: none;
       display: block;
-      border: 2px solid transparent;
+      @include nav-inner-border;
       border-top: none;
       border-bottom: none;
 
       &:last-child {
-        border-right: 2px solid transparent;
-        border-bottom: 2px solid transparent;
+        @include nav-inner-border(right);
+        @include nav-inner-border(bottom);
       }
     }
 
@@ -90,5 +100,9 @@ nav {
       color: $color-bg;
       background: $color-nav-active;
     }
+  }
+
+  .site-title, .intro {
+    text-align: left;
   }
 }

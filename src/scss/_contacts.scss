@@ -1,4 +1,5 @@
 $photo-w: 80px;
+$photo-h: 111px;
 
 // -----------------------------------------------------------------------------
 
@@ -59,24 +60,87 @@ $photo-w: 80px;
     font-size: 0;
   }
 
-  .person {
-    font-size: $size-base;
-    width: 50%;
-    display: inline-block;
+}
 
-    img {
-      width: 80px;
-      clear: both;
-    }
+.person {
+  font-size: $size-base;
+  width: 50%;
+  display: inline-block;
 
-    &:first-child {
-      text-align: right;
-      padding-right: $spacing;
-    }
+  img {
+    width: $photo-w;
+    clear: both;
+  }
 
-    &:last-child {
-      text-aling: left;
-      padding-left: $spacing;
+  &:first-child {
+    text-align: right;
+    padding-right: $spacing;
+  }
+
+  &:last-child {
+    text-align: left;
+    padding-left: $spacing;
+  }
+
+  .name {
+    span {
+      width: $photo-w;
+      display: inline-block;
     }
   }
+}
+
+// -----------------------------------------------------------------------------
+
+@media #{$phone-lrg} {
+  .arrange {
+    p {
+      text-align: center;
+    }
+  }
+}
+
+@media #{$phone-lrg-landscape} {
+
+  /*
+
+  .person {
+
+    position: relative;
+    padding-left: $photo-w + $spacing;
+    padding-right: $spacing/2;
+    text-align: left;
+    height: $photo-h;
+
+    &:first-child {
+      text-align: left;
+    }
+
+
+
+    &:last-child {
+      padding-left: $photo-w + $spacing * 1.5;
+
+      img {
+        left: $spacing / 2;
+      }
+    }
+
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+
+
+  }
+
+  */
+
+  .hours h2 {
+    margin-top: 0;
+  }
+
 }

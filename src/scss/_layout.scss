@@ -33,3 +33,24 @@ body {
   }
 
 }
+
+@media #{$phone-lrg-landscape} {
+
+  .columns {
+    font-size: 0;
+  }
+
+  .column {
+    width: 50%;
+    display: inline-block;
+    font-size: $size-base;
+    vertical-align: top;
+    padding-right: $spacing * 3;
+
+    &:last-child {
+      padding-right: 0;
+      padding-left: $spacing * 3;
+    }
+  }
+
+}

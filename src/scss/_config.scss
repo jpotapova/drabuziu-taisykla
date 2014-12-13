@@ -5,8 +5,9 @@ $size-base: 16px;
 $spacing: 10px;
 
 // MEDIA QUERIES ---------------------------------------------------------------
-
-$tablet: " (min-width : 700px)";
+$phone-lrg: " (min-width: 400px)";
+$phone-lrg-landscape: " (min-width: 533px)";
+$tablet: " (min-width : 640px)";
 
 // COLOURS ---------------------------------------------------------------------
 
