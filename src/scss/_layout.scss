@@ -49,9 +49,12 @@ body {
   }
 
   .column {
+    font-size: $size-base;
+  }
+
+  .column:not(.subcolumn) {
     width: 50%;
     display: inline-block;
-    font-size: $size-base;
     vertical-align: top;
     padding-right: $spacing * 3;
 
@@ -59,6 +62,26 @@ body {
       padding-right: 0;
       padding-left: $spacing * 3;
     }
+  }
+}
+
+@media #{$desktop} {
+
+  .subcolumn {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    padding-right: $spacing * 3;
+
+    &:last-child {
+      padding-right: 0;
+      padding-left: $spacing * 3;
+    }
+  }
+
+  .wrapper {
+    width: 1000px;
+    margin: 0 auto;
   }
 
 }

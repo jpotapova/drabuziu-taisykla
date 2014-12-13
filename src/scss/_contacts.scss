@@ -102,30 +102,25 @@ $photo-h: 111px;
 
 @media #{$phone-lrg-landscape} {
 
-  address {
-    padding-bottom: $spacing * 2;
-    border-bottom: 1px solid $color-secondary-border;
-  }
-
-  .hours {
+  .find {
     h2 {
       margin-top: 0;
     }
   }
 
-  .team {
-    h2 {
-      margin-top: $spacing * 2;
+  .contacts {
+    .column:last-child {
+      border-left: 1px solid $color-secondary-border;
+
+    }
+
+    .subcolumns .column {
+      border-left: 0;
     }
   }
 
-  .find {
-    border-top: 1px solid $color-secondary-border;
+  .arrange {
     margin-top: $spacing;
-
-    h2 {
-      margin-top: $spacing * 2;
-    }
   }
 
 }
@@ -149,6 +144,21 @@ $photo-h: 111px;
     .name {
       padding-left: $photo-w + $spacing;
       text-align: left;
+    }
+  }
+
+}
+
+@media #{$desktop} {
+  .hours {
+    h2 {
+      margin-top: 0;
+    }
+  }
+
+  .contacts {
+    .column.subcolumn {
+      border: none;
     }
   }
 
