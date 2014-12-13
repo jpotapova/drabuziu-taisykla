@@ -34,6 +34,10 @@ body {
     .intro {
       display: none;
     }
+
+    .site-title {
+      margin-bottom: $spacing * 2;
+    }
   }
 
   .main {
