@@ -7,16 +7,28 @@ module.exports = (grunt) ->
       options:
         layout: 'src/hbs/templates/basic.hbs'
         flatten: true
-      lt:
+      'lt-dev':
         options:
           data: [
-            'src/hbs/data/lang/lt/*.json',
+            'src/hbs/data/lang/lt/*.json'
             'src/hbs/data/dev/env.json'
           ]
         files:
           [
             'app/index.html': 'src/hbs/pages/index.hbs'
-            'app/kontaktai/index.html': 'src/hbs/pages/contacts.hbs',
+            'app/kontaktai/index.html': 'src/hbs/pages/contacts.hbs'
+            'app/404.html': 'src/hbs/pages/error.hbs'
+          ]
+      'lt-prod':
+        options:
+          data: [
+            'src/hbs/data/lang/lt/*.json'
+            'src/hbs/data/prod/env.json'
+          ]
+        files:
+          [
+            'app/index.html': 'src/hbs/pages/index.hbs'
+            'app/kontaktai/index.html': 'src/hbs/pages/contacts.hbs'
             'app/404.html': 'src/hbs/pages/error.hbs'
           ]
     coffee:
@@ -51,7 +63,12 @@ module.exports = (grunt) ->
     jshint:
       app: 'src/js/main.js'
     sass:
-      app:
+      dev:
+        files:
+          'app/css/main.css': 'src/scss/main.scss'
+      prod:
+        options:
+          style: 'compressed'
         files:
           'app/css/main.css': 'src/scss/main.scss'
     scsslint:
@@ -93,17 +110,16 @@ module.exports = (grunt) ->
   ]
 
   grunt.registerTask 'dev', [
-    'assemble'
+    'assemble:lt-dev'
     'copy'
-    'sass'
+    'sass:dev'
     'coffee'
     'uglify:dev'
   ]
   grunt.registerTask 'prod', [
-    'clean'
-    'assemble'
+    'assemble:lt-prod'
     'copy'
-    'sass'
+    'sass:prod'
     'coffee'
     'uglify:prod'
   ]
