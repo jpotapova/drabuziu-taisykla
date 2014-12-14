@@ -16,7 +16,8 @@ module.exports = (grunt) ->
         files:
           [
             'app/index.html': 'src/hbs/pages/index.hbs'
-            'app/kontaktai/index.html': 'src/hbs/pages/contacts.hbs'
+            'app/kontaktai/index.html': 'src/hbs/pages/contacts.hbs',
+            'app/404.html': 'src/hbs/pages/error.hbs'
           ]
     coffee:
       app:
