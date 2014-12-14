@@ -22,10 +22,19 @@ module.exports = (grunt) ->
     coffee:
       app:
         files:
-          'app/js/main.js': 'src/coffee/main.coffee'
+          'src/js/main.js': 'src/coffee/main.coffee'
     coffeelint:
       app: 'src/coffee/main.coffee'
       grunt: 'Gruntfile.coffee'
+    uglify:
+      prod:
+        files:
+          'app/js/main.js': 'src/js/main.js'
+      dev:
+        options:
+          mangle: false
+        files:
+          'app/js/main.js': 'src/js/main.js'
     copy:
       libs:
         flatten: true
@@ -40,7 +49,7 @@ module.exports = (grunt) ->
         src: ['*.png', '*.jpg', '*.ico']
         dest: 'app/img/'
     jshint:
-      app: 'app/js/main.js'
+      app: 'src/js/main.js'
     sass:
       app:
         files:
@@ -71,13 +80,31 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-coffeelint'
   grunt.loadNpmTasks 'grunt-contrib-clean'
+  grunt.loadNpmTasks 'grunt-contrib-uglify'
+
+  grunt.registerTask 'health', [
+    'sass'
+    'scsslint'
+    'csslint'
+    'coffeelint'
+    'coffee'
+    'uglify:dev'
+    'jshint'
+  ]
 
   grunt.registerTask 'dev', [
-    'assemble',
-    'copy',
-    'sass',
-    'coffeelint',
-    'coffee',
-    'jshint'
+    'assemble'
+    'copy'
+    'sass'
+    'coffee'
+    'uglify:dev'
+  ]
+  grunt.registerTask 'prod', [
+    'clean'
+    'assemble'
+    'copy'
+    'sass'
+    'coffee'
+    'uglify:prod'
   ]
   grunt.registerTask 'default', ['dev', 'watch']
