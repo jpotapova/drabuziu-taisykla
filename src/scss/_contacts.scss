@@ -92,7 +92,7 @@ $photo-h: 111px;
 
 // -----------------------------------------------------------------------------
 
-@media #{$phone-lrg} {
+@media #{$arrange} {
   .arrange {
     p {
       text-align: center;
@@ -100,7 +100,7 @@ $photo-h: 111px;
   }
 }
 
-@media #{$phone-lrg-landscape} {
+@media #{$columns} {
 
   .find {
     h2 {
@@ -125,7 +125,7 @@ $photo-h: 111px;
 
 }
 
-@media #{$tablet-lrg} {
+@media #{$team} {
 
   .person {
     position: relative;
@@ -149,7 +149,7 @@ $photo-h: 111px;
 
 }
 
-@media #{$desktop} {
+@media #{$subcolumns} {
   .hours {
     h2 {
       margin-top: 0;

@@ -2,7 +2,7 @@ DrabuziuTaisykla =
 
   init: ->
 
-    mq = window.matchMedia "(max-width: 532px)"
+    mq = window.matchMedia "(max-width: 667px)"
 
     DrabuziuTaisykla.header mq
 

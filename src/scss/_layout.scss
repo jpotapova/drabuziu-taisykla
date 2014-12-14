@@ -47,7 +47,7 @@ body {
 
 }
 
-@media #{$phone-lrg-landscape} {
+@media #{$columns} {
 
   .columns {
     font-size: 0;
@@ -70,7 +70,7 @@ body {
   }
 }
 
-@media #{$desktop} {
+@media #{$subcolumns} {
 
   .subcolumn {
     width: 50%;

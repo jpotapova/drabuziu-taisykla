@@ -59,7 +59,7 @@ img {
   }
 }
 
-@media #{$phone-lrg-landscape} {
+@media #{$columns} {
   img {
     max-width: 100%;
   }

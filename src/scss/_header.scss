@@ -57,7 +57,7 @@ nav {
   }
 }
 
-@media #{$phone-lrg-landscape} {
+@media #{$header} {
   header {
     position: relative;
     padding-left: $nav-width + 1.5em;
