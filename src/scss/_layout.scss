@@ -20,6 +20,7 @@ body {
   padding: $spacing;
   padding-bottom: 0;
 
+
   p {
     text-align: justify;
   }
@@ -40,8 +41,8 @@ body {
     }
   }
 
-  .main {
-    margin-top: 7em;
+  .wrapper {
+    padding-top: 7em;
   }
 
 }
