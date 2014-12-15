@@ -9,12 +9,12 @@
       "active": false
     },
     "contacts": {
-      "link": "/kontaktai/",
+      "link": "kontaktai/",
       "label": "Kontaktai",
       "active": false
     },
     "prices": {
-      "link": "/kainos/",
+      "link": "kainos/",
       "label": "Kainos",
       "active": false
     }

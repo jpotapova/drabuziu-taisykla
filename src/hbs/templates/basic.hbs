@@ -44,9 +44,7 @@
 
           <nav>
             <ul>
-              {{#with site.nav.home}}
-              <li {{#if active}}class="active"{{/if}}><a href="{{link}}">{{label}}</a></li>
-              {{/with}}
+              <li {{#if site.nav.home.active}}class="active"{{/if}}><a href="{{env.base}}">{{site.nav.home.label}}</a></li>
               {{#with site.nav.contacts}}
               <li {{#if active}}class="active"{{/if}}><a href="{{link}}">{{label}}</a></li>
               {{/with}}
