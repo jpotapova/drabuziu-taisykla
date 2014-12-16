@@ -7,11 +7,9 @@ site.nav.prices.active: <% site.nav.prices.active = false %>
 site.nav.contacts.active: <% site.nav.contacts.active = false %>
 ---
 
-{{#with error}}
+<h1>{{error.heading}}</h1>
 
-<h1>{{heading}}</h1>
-
-<p class="to-home"><a href="/">{{to-home}}</a></p>
+<p class="to-home"><a href="{{env.base}}">{{error.to-home}}</a></p>
 
 <address>
   <p>+370 611 08 650</p>
@@ -19,5 +17,3 @@ site.nav.contacts.active: <% site.nav.contacts.active = false %>
   <p>Antakalnio g. 84, Vilnius</p>
   <p><a href="mailto:drabuziu.taisykla@gmail.com">drabuziu.taisykla@gmail.com</a></p>
 </address>
-
-{{/with}}
