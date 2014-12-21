@@ -21,27 +21,6 @@ body {
   padding-bottom: 0;
 }
 
-.scrolled {
-
-  header {
-    position: fixed;
-    top: 0;
-
-    .small {
-      display: none;
-    }
-
-    .site-title {
-      margin-bottom: $spacing * 2;
-    }
-  }
-
-  .wrapper {
-    padding-top: 7em;
-  }
-
-}
-
 @media #{$columns} {
 
   .columns {

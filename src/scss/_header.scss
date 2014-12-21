@@ -45,6 +45,30 @@ nav {
 }
 
 // -----------------------------------------------------------------------------
+
+@media #{$sticky} {
+    .scrolled {
+
+      header {
+        position: fixed;
+        top: 0;
+
+        .small {
+          display: none;
+        }
+
+        .site-title {
+          margin-bottom: $spacing * 2;
+        }
+      }
+
+      .wrapper {
+        padding-top: 7em;
+      }
+
+    }
+}
+
 @mixin nav-inner-border($side: all) {
   @if $side == all {
     border: $nav-border-size/2 solid transparent;
@@ -104,4 +128,5 @@ nav {
       background: $color-nav-active;
     }
   }
+
 }
