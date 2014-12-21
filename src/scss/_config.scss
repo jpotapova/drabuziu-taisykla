@@ -5,11 +5,10 @@ $size-base: 16px;
 $spacing: 10px;
 
 // MEDIA QUERIES ---------------------------------------------------------------
-$people: "(min-width: 371px)";
 $arrange: " (min-width: 400px)";
 $columns: " (min-width: 533px)";
 $header: " (min-width: 668px)";
-$team: " (min-width: 820px)";
+$team: " (min-width: 400px) and (max-width: 532px), (min-width: 820px)";
 $subcolumns: " (min-width: 1000px)";
 
 // COLOURS ---------------------------------------------------------------------

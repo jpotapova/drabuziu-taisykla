@@ -1,5 +1,6 @@
 $photo-w: 80px;
 $photo-h: 111px;
+$job-w: 90px;
 
 // -----------------------------------------------------------------------------
 
@@ -81,29 +82,65 @@ $photo-h: 111px;
     text-align: left;
     padding-left: $spacing;
   }
+}
 
-  .name {
-    span {
-      width: $photo-w;
-      display: inline-block;
-    }
+.name {
+  span {
+    width: $job-w;
+    display: inline-block;
   }
 }
 
 // -----------------------------------------------------------------------------
-
-@media #{$people} {
-  .name {
-    float: left;
-  }
-}
-
 @media #{$arrange} {
   .arrange {
     p {
       text-align: center;
     }
   }
+}
+
+@media #{$team} {
+
+  .name {
+    padding-left: $photo-w + $spacing;
+    position: absolute;
+    top: 0;
+    left: $spacing;
+    max-width: $photo-w + $job-w + $spacing;
+
+    span {
+      width: auto;
+    }
+  }
+
+  .person {
+
+    height: $photo-h;
+    position: relative;
+
+    img {
+      position: absolute;
+      left: $spacing;
+      top: 0;
+    }
+
+    &:first-child {
+      img {
+        left: auto;
+        right: $spacing;
+      }
+
+      .name {
+        padding-left: 0;
+        padding-right: $photo-w + $spacing;
+        right: $spacing;
+        left: auto;
+      }
+    }
+
+  }
+
 }
 
 @media #{$columns} {
@@ -131,6 +168,7 @@ $photo-h: 111px;
 
 }
 
+/*
 @media #{$team} {
 
   .person {
@@ -154,6 +192,7 @@ $photo-h: 111px;
   }
 
 }
+*/
 
 @media #{$subcolumns} {
   .hours {
