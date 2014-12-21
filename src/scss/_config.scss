@@ -3,9 +3,11 @@
 $line-height: 1.5em;
 $size-base: 16px;
 $spacing: 10px;
+$max-site-w: 1000px;
 
 // MEDIA QUERIES ---------------------------------------------------------------
 $arrange: " (min-width: 400px)";
+$image: " (min-width: 467px)";
 $columns: " (min-width: 533px)";
 $header: " (min-width: 668px)";
 $team: " (min-width: 400px) and (max-width: 532px), (min-width: 820px)";
