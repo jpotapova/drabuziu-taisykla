@@ -100,7 +100,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-uglify'
 
   grunt.registerTask 'health', [
-    'sass'
+    'sass:dev'
     'scsslint'
     'csslint'
     'coffeelint'

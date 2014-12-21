@@ -72,8 +72,6 @@ p {
 header {
   p {
     text-align: center;
-    color: $color-secondary;
-    font-size: 0.8em;
   }
 }
 
@@ -106,4 +104,9 @@ table {
     color: $color-heading;
     text-decoration: none;
   }
+}
+
+.small {
+  font-size: 0.8em;
+  color: $color-secondary;
 }

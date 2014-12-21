@@ -16,7 +16,7 @@ $job-w: 90px;
     text-align: left;
   }
 
-  h2 {
+  .h2 {
     color: $color-heading;
     text-align: left;
   }
@@ -146,7 +146,7 @@ $job-w: 90px;
 @media #{$columns} {
 
   .find {
-    h2 {
+    .h2 {
       margin-top: 0;
     }
   }
@@ -168,43 +168,20 @@ $job-w: 90px;
 
 }
 
-/*
-@media #{$team} {
-
-  .person {
-    position: relative;
-    min-height: $photo-h;
-
-    &:last-child {
-      padding-left: 0;
-    }
-
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    .name {
-      padding-left: $photo-w + $spacing;
-      text-align: left;
-    }
-  }
-
-}
-*/
-
 @media #{$subcolumns} {
   .hours {
-    h2 {
+    .h2 {
       margin-top: 0;
     }
   }
 
   .contacts {
-    .column.subcolumn {
-      border: none;
+    .subcolumns {
+      .subcolumn {
+        border: none;
+      }
     }
+
   }
 
 }
