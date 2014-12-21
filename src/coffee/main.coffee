@@ -2,6 +2,8 @@ DrabuziuTaisykla =
 
   init: ->
 
+    $('html').removeClass 'no-js'
+
     $(window).bind(
       'scroll'
       (e) ->
