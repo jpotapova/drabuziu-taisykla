@@ -2,15 +2,19 @@ DrabuziuTaisykla =
 
   init: ->
 
-    $('html').removeClass 'no-js'
+    # remove no-js class from html to indicate js was detected
+    top.document.getElementsByTagName('html')[0].classname = ''
 
-    $(window).bind(
-      'scroll'
+    body = document.body
+
+    window.onscroll =
       (e) ->
-        if document.body.scrollTop <= 0
-          $('body').removeClass 'scrolled'
+
+        if body.scrollTop <= 0
+          # when at the top - remove class scrolled
+          body.className = ''
         else
-          $('body').addClass 'scrolled'
-    )
+          # when not at the very top - add class scrolled
+          body.className = 'scrolled'
 
 DrabuziuTaisykla.init()
