@@ -3,31 +3,6 @@ $photo-h: 111px;
 $job-w: 90px;
 
 // -----------------------------------------------------------------------------
-
-.contact {
-
-  display: table;
-  width: 100%;
-  margin-bottom: $spacing * 2;
-
-  div, address {
-    display: table-cell;
-    vertical-align: top;
-    text-align: left;
-  }
-
-  .h2 {
-    color: $color-heading;
-    text-align: left;
-  }
-
-}
-
-.photo {
-  width: $photo-w;
-  padding-right: $spacing;
-}
-
 .arrange {
   p {
     margin-top: 0;
