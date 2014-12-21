@@ -45,6 +45,8 @@ module.exports = (grunt) ->
       dev:
         options:
           mangle: false
+          compress: false
+          beautify: true
         files:
           'app/js/main.js': 'src/js/main.js'
     copy:

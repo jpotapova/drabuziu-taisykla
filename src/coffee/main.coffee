@@ -2,6 +2,11 @@ DrabuziuTaisykla =
 
   init: ->
 
+    ###
+    Define circumstances when special mobile header behaviour
+    should be triggered
+    ###
+
     mq = window.matchMedia "(max-width: 667px)"
 
     DrabuziuTaisykla.header mq
@@ -12,6 +17,12 @@ DrabuziuTaisykla =
     )
 
   header: (m) ->
+
+    ###
+    On mobile device when scrolling down,
+    hide intro text and leave navigation always visible
+    ###
+
     if m.matches
       $(window).bind(
         'scroll'
