@@ -35,9 +35,17 @@ module.exports = (grunt) ->
       app:
         files:
           'src/js/main.js': 'src/coffee/main.coffee'
+      tests:
+        expand: true
+        flatten: true
+        cwd: 'tests/coffee'
+        src: ['*.coffee']
+        dest: 'tests/js/'
+        ext: '.js'
     coffeelint:
       app: 'src/coffee/main.coffee'
       grunt: 'Gruntfile.coffee'
+      tests: 'tests/coffee/*.coffee'
     uglify:
       prod:
         files:
@@ -83,6 +91,8 @@ module.exports = (grunt) ->
           import: 2
       src:
         'app/css/main.css'
+    casperjs:
+      files: ['tests/js/*.js']
     watch:
       app:
         files: ['src/**/*.*']
@@ -100,6 +110,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-coffeelint'
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
+  grunt.loadNpmTasks 'grunt-casperjs'
 
   grunt.registerTask 'health', [
     'sass:dev'
@@ -108,21 +119,25 @@ module.exports = (grunt) ->
     'coffeelint'
     'coffee'
     'uglify:dev'
-    'jshint'
+    'jshint',
+    'casperjs'
   ]
 
   grunt.registerTask 'dev', [
     'assemble:lt-dev'
     'copy'
     'sass:dev'
-    'coffee'
+    'coffee:app'
     'uglify:dev'
   ]
   grunt.registerTask 'prod', [
     'assemble:lt-prod'
     'copy'
     'sass:prod'
-    'coffee'
+    'coffee:app'
     'uglify:prod'
   ]
+
+  grunt.registerTask 'test', ['coffee', 'uglify:dev', 'casperjs']
+
   grunt.registerTask 'default', ['dev', 'watch']
