@@ -7,7 +7,7 @@ Built with [assemble](http://assemble.io), [Sass](http://sass-lang.com/),
 [CoffeeScript](http://coffeescript.org/), [Grunt](http://gruntjs.com/),
 [CasperJs](http://casperjs.org/)
 
-As starting point for the design I used a free website template
+As a starting point for the design I used a free website template
 [Quietude](http://templates.arcsin.se/quietude-website-template/) by Arcsin.
 
 ## Build

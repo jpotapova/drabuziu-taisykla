@@ -3,7 +3,7 @@ DrabuziuTaisykla =
   init: ->
 
     # remove no-js class from html to indicate js was detected
-    top.document.getElementsByTagName('html')[0].classname = ''
+    top.document.getElementsByTagName('html')[0].className = ''
 
     body = document.body
 
