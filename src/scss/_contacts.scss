@@ -38,8 +38,10 @@ $job-w: 90px;
 }
 
 .person {
-  width: 50%;
-  display: inline-block;
+//  width: 50%;
+    width:200px;
+    margin-left: auto;
+    margin-right: auto;
 
   img {
     width: $photo-w;
@@ -98,6 +100,10 @@ $job-w: 90px;
 
     height: $photo-h;
     position: relative;
+    float:none;
+    margin-left:auto;
+    margin-right:auto;
+    width:180px;
 
     img {
       position: absolute;
@@ -120,7 +126,11 @@ $job-w: 90px;
     }
 
   }
-
+    .find {
+      .h2 {
+        //margin-top: 30px;
+      }
+    }
 }
 
 @media #{$columns} {
