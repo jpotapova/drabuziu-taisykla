@@ -1,0 +1,1 @@
+(function(){var a;a={init:function(){var a;return top.document.getElementsByTagName("html")[0].className="",a=document.body,window.onscroll=function(){return a.className=a.scrollTop<=0?"":"scrolled"}}},a.init()}).call(this);

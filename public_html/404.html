@@ -2,13 +2,13 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="{{site.lang}}" class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html lang="lt" class="no-js"> <!--<![endif]-->
     <head>
-        <base href="{{env.base}}" >
+        <base href="http://www.drabuziutaisykla.lt/" >
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{site.title}} - {{#if title}}{{title}} - {{/if}}{{site.title-info}}</title>
-        <meta name="description" content="{{description}}">
+        <title>Drabužių Taisykla - Klaida - siuvimo ir taisymo paslaugos Antakalnyje</title>
+        <meta name="description" content="Maloniai kviečiame apsilankyti ir pasinaudoti drabužių siuvimo bei taisymo paslaugomis! Trumpiname, ilginame kelnes, sijonus, trikotažinius drabužius, siuriname, platiname, lopome, keičiame užtrauktukus, pamušalus.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/ico" href="/img/favicon.ico">
         <link rel="stylesheet" href="css/main.css">
@@ -39,30 +39,44 @@
 
         <header>
 
-          <p class="site-title"><a href="/">{{site.title}}</a></p>
-          <p class="small">{{{site.intro}}}</p>
+          <p class="site-title"><a href="/">Drabužių Taisykla</a></p>
+          <p class="small">Maloniai kviečiame apsilankyti ir pasinaudoti drabužių siuvimo bei taisymo paslaugomis!</p>
+
+          
 
           <nav>
             <ul class="size-reset">
-              <li class="size-init {{#if site.nav.home.active}}active{{/if}}"><a href="{{env.base}}" class="h2">{{site.nav.home.label}}</a></li>
-              {{#with site.nav.contacts}}
-              <li class="size-init {{#if active}}active{{/if}}"><a href="{{link}}" class="h2">{{label}}</a></li>
-              {{/with}}
+              <li class="size-init "><a href="http://www.drabuziutaisykla.lt/" class="h2">Pradinis</a></li>
+
+              <li class="size-init "><a href="kontaktai/" class="h2">Kontaktai</a></li>
+
             </ul>
           </nav>
 
         </header>
 
-        <div class="main {{code}}">
+        <div class="main error">
 
-          {{>body}}
+
+
+<h1>Puslapis nerastas</h1>
+
+<p class="to-home"><a href="http://www.drabuziutaisykla.lt/">Grįžti į pradinį puslapį</a></p>
+
+<address>
+  <p>+370 611 08 650</p>
+  <p>+370 607 41 385</p>
+  <p>Antakalnio g. 84, Vilnius</p>
+  <p><a href="mailto:drabuziu.taisykla@gmail.com">drabuziu.taisykla@gmail.com</a></p>
+</address>
+
 
         </div>
 
         <footer class="small">
           <div>
             <div>&copy; 2010-2014 DrabužiųTaisykla.lt</div>
-            <div>{{site.credit}}<a href="http://arcsin.se/" target="_blank">Arcsin</a></div>
+            <div>Dizainas: <a href="http://arcsin.se/" target="_blank">Arcsin</a></div>
           </div>
         </footer>
 
